@@ -1,81 +1,53 @@
 GESTOR DE GASTOS
 
-Descripción: Con este programa vas a poder gestionar tus gastos.
-Podés realizar las siguientes acciones:
-* Agregar gastos nuevos
-* Ver todos los gastos que agregaste
-* Eliminar gastos
-* Modificar gastos existentes
 
-Los gastos se guardan automáticamente en el archivo `gastos.json`.  
-Además, cada acción que hagas se registra en el archivo `registro.log` (por ejemplo: agregar, eliminar o modificar).
+Descripción
 
----
+Aplicación de línea de comandos desarrollada en Python para gestionar gastos personales, con almacenamiento persistente y registro de operaciones.
+El proyecto está orientado a la organización estructurada de datos y a servir como base para futuros análisis y visualizaciones.
 
-Requisitos
 
-* Tener Python 3.10 o superior instalado.
+Problema
 
----
+Gestionar gastos de forma manual o en herramientas simples suele generar datos desordenados y poca visibilidad sobre los hábitos de consumo.
 
-¿Qué es un entorno virtual y para qué sirve?
 
-Un entorno virtual es un espacio aislado dentro de tu computadora donde podés instalar y gestionar las librerías que necesita este proyecto, sin afectar otros proyectos o programas que tengas.  
-Esto ayuda a mantener tu proyecto ordenado y que funcione igual en cualquier computadora, evitando conflictos de versiones de librerías.
+Solución
 
-En Python, se suele crear este entorno virtual usando la herramienta llamada `venv`.
+Esta aplicación centraliza el registro de gastos en un único sistema, permitiendo almacenar, modificar y eliminar registros de forma estructurada, manteniendo además un historial de acciones realizadas.
 
----
 
-¿Cómo instalar y correr el programa?
+Funcionalidades principales
 
-Paso 1: Crear un entorno virtual.
-En la terminal, ejecutar:
+Almacenamiento persistente en JSON
+Registro de acciones mediante logging (alta, modificación y eliminación)
+Interfaz interactiva por consola
+Manejo de errores en la entrada de datos
 
-python -m venv venv
 
-Paso 2: Activar el entorno virtual.
-En Windows / PowerShell:
+Diseño técnico
 
-venv\Scripts\activate
+Estructura modular para separar lógica, datos e interfaz
+Uso de JSON como solución simple y portable de almacenamiento
+Implementación de logging para trazabilidad y depuración
+Validaciones para mejorar la robustez del sistema
 
-En Linux / macOS:
 
-source venv/bin/activate
+Enfoque en datos
 
-Paso 3: Instalar dependencias.
-Una vez activado el entorno virtual, instalar las librerías necesarias:
+Los datos generados por la aplicación pueden ser utilizados como base para:
+Análisis de gastos personales
+Clasificación y segmentación por categorías
+Integración con herramientas de visualización (Power BI / Looker Studio)
 
+
+Tecnologías utilizadas
+
+Python
+Rich
+Tabulate
+
+
+Ejecución
 pip install -r requirements.txt
-
-Paso 4: Ejecutar el programa.
-Estando dentro del entorno virtual, correr el archivo main.py:
-
 python main.py
-
----
-
-Ejemplo de uso
-
-Cuando ejecutes el programa, vas a ver algo así:
-
-Menú del Gestor de Gastos Personales
-1. Agregar gasto
-2. Lista de gastos
-3. Eliminar gasto
-4. Modificar gasto
-5. Salir
-
-Solo elegís una opción y seguís los pasos.
-
----
-
-Archivos importantes:
-
-gastos.json: Archivo donde se guardan todos tus gastos registrados.
-
-registro.log: Archivo que registra las acciones realizadas, como agregar, modificar, o eliminar gastos.
-
----
-
-Espero que te sirva!
